@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="style.css" nonce="" />
+    <!--script
+      src="https://kit.fontawesome.com/yourcode.js"
+      crossorigin="anonymous"
+    ></script-->
+    <title>Web page pattern</title>
+  </head>
+  <body>
+    <div class="header" id="top">
+      <a>Link 1</a>
+      <a>Link 2</a>
+      <a>Link 3</a>
+      <!-- i class="fas fa-search"></i-->
+      <input type="text" />
+    </div>
+
+    <div class="container">
+      <div class="side-left"></div>
+
+      <div class="content">
+        <h1>Web page pattern</h1>
+        <div class="field">
+          <div class="frame">
+            <div></div>
+            <h2>Hello!</h2>
+          </div>
+          <div class="frame">
+            <div></div>
+            <h2>Hello!</h2>
+          </div>
+          <div class="frame">
+            <div></div>
+            <h2>Hello!</h2>
+          </div>
+          <div class="frame">
+            <div></div>
+            <h2>Hello!</h2>
+          </div>
+        </div>
+
+        <div class="footer">
+          <div>
+            <p>
+              txttxttxttxt<br />txttxttxttxt<br />txttxttxttxt<br />txttxttxttxt<br />
+            </p>
+            <p>
+              txttxttxttxt<br />txttxttxttxt<br />txttxttxttxt<br />txttxttxttxt<br />
+            </p>
+            <p>
+              txttxttxttxt<br />txttxttxttxt<br />txttxttxttxt<br />txttxttxttxt<br />
+            </p>
+            <p>
+              txttxttxttxt<br />txttxttxttxt<br />txttxttxttxt<br />txttxttxttxt<br />
+            </p>
+          </div>
+          <div>
+            <p>
+              txttxttxttxt<br />txttxttxttxt<br />txttxttxttxt<br />txttxttxttxt<br />
+            </p>
+            <p>
+              txttxttxttxt<br />txttxttxttxt<br />txttxttxttxt<br />txttxttxttxt<br />
+            </p>
+            <p>
+              txttxttxttxt<br />txttxttxttxt<br />txttxttxttxt<br />txttxttxttxt<br />
+            </p>
+            <p>
+              txttxttxttxt<br />txttxttxttxt<br />txttxttxttxt<br />txttxttxttxt<br />
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="side-right"></div>
+    </div>
+    <script>
+      let urls = {
+        link1: "https://www.facebook.com",
+        link2: "https://www.google.com",
+        link3: "https://www.amazon.com",
+        link4: "https://www.twitter.com",
+        link5: "https://www.spacex.com",
+        link6: "https://www.linkedin.com",
+      };
+      links = document.querySelectorAll(".header > a");
+      const shuffleLinks = (links, urls) => {
+        for (let i = 0; i < links.length; i++) {
+          links[i].setAttribute(
+            "href",
+            urls["link" + (Math.floor(Math.random() * 6) + 1)]
+          );
+          links[i].setAttribute(
+            "class",
+            "header a" + (Math.floor(Math.random() * 3) + 1)
+          );
+        }
+      };
+      setInterval(() => shuffleLinks(links, urls), 1000);
+    </script>
+  </body>
+</html>
