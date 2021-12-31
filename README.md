@@ -1,2 +1,2 @@
 # Exercises-fullstack
-Exercises in fullstak course at ORT. 🖥️🌐
+Exercises for fullstak course at ORT. 🖥️🌐
